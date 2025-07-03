@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prospine Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="header">Prospine AI Assistant</div>
+    <div id="chat-box" class="chat-box"></div>
+
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("user-input");
+    const chatBox = document.getElementById("chat-box");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const userMsg = input.value.trim();
+      if (!userMsg) return;
+
+      appendMessage("You", userMsg);
+      input.value = "";
+
+      try {
+        const response = await fetch("/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: userMsg })
+        });
+
+        const text = await response.text();
+        console.log("Raw response:", text); // Helpful for debugging
+
+        let data;
+        try {
+          data = JSON.parse(text);
+        } catch (parseErr) {
+          appendMessage("Bot", "⚠️ Server returned invalid response.");
+          return;
+        }
+
+        if (data.reply) {
+          appendMessage("Bot", data.reply);
+        } else if (data.error) {
+          appendMessage("Bot", "⚠️ Error: " + data.error);
+        } else {
+          appendMessage("Bot", "⚠️ Unexpected response format.");
+        }
+
+      } catch (err) {
+        appendMessage("Bot", "⚠️ Network error: " + err.message);
+      }
+    });
+
+    function appendMessage(sender, message) {
+      const msgDiv = document.createElement("div");
+      msgDiv.className = `message ${sender === "You" ? "user" : "bot"}`;
+      msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+      chatBox.appendChild(msgDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
+

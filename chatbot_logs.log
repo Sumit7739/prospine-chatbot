@@ -1,0 +1,57 @@
+2025-04-08 21:16:31,596 - INFO - Use pytorch device_name: cpu
+2025-04-08 21:16:31,596 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 21:16:31,597 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-08 21:16:31,903 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-04-08 21:16:32,246 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-04-08 21:16:32,498 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-04-08 21:16:32,862 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-04-08 21:16:33,168 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-04-08 21:16:33,475 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-04-08 21:16:33,783 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-04-08 21:16:34,153 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-04-08 21:16:34,499 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6759
+2025-04-08 21:16:35,469 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6759
+2025-04-08 21:16:35,609 - DEBUG - Starting component System
+2025-04-08 21:16:35,609 - DEBUG - Starting component Posthog
+2025-04-08 21:16:39,956 - INFO - Sending request to Ollama with question: hii
+2025-04-08 21:16:39,956 - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-04-08 21:16:49,173 - DEBUG - http://localhost:11434 "POST /api/generate HTTP/1.1" 200 None
+2025-04-08 21:16:49,173 - DEBUG - Raw response from Ollama: <think>
+Alright, so someone just said "hii". Hmm, I need to figure out how to respond. The user mentioned "hi", which is a friendly greeting. Since I'm Prospine, I should be helpful and empathetic.
+
+Looking at the context provided earlier, it's about supporting users in their health-related questions, especially spine care and physiotherapy. But there's no information on hii or any specific topics related to hii. It could be a typo or someone asking something unexpected.
+
+I don't have any predefined knowledge of hii, so I can't provide detailed info. My response should guide them towards the appropriate section if I had that context. Since I don't, it's best to say I'm sorry and ask for more details. That way, I maintain a friendly tone while keeping things open-ended.
+
+I think using "Sorry" is appropriate here because it shows understanding without giving away too much. Maybe something like, "I'm sorry, but I don't have specific information about hii." This keeps the conversation going and offers support if they're looking for more help.
+</think>
+
+I'm sorry, but I don't have specific information about hii. Could you clarify or provide more details?
+2025-04-08 21:16:49,174 - INFO - Cleaned response: I'm sorry, but I don't have specific information about hii. Could you clarify or provide more details?
+2025-04-08 21:17:23,159 - INFO - Query 'Tell me about the pricing of the treatments in prospine' requires a web search.
+2025-04-08 21:17:23,160 - INFO - Searching Prospine website with query: Tell me about the pricing of the treatments in prospine
+2025-04-08 21:17:23,161 - DEBUG - Starting new HTTPS connection (1): prospine.in:443
+2025-04-08 21:17:23,346 - DEBUG - https://prospine.in:443 "GET /search?q=Tell%20me%20about%20the%20pricing%20of%20the%20treatments%20in%20prospine HTTP/1.1" 404 5254
+2025-04-08 21:17:23,347 - DEBUG - Prospine website response status code: 404
+2025-04-08 21:17:23,347 - WARNING - Failed to fetch data from Prospine website. Status code: 404
+2025-04-08 21:18:04,338 - INFO - Use pytorch device_name: cpu
+2025-04-08 21:18:04,339 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 21:18:04,340 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-04-08 21:18:05,205 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-04-08 21:18:05,471 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-04-08 21:18:06,148 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-04-08 21:18:06,967 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-04-08 21:18:08,913 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-04-08 21:18:09,322 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-04-08 21:18:09,630 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-04-08 21:18:10,039 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-04-08 21:18:10,346 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6759
+2025-04-08 21:18:10,648 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6759
+2025-04-08 21:18:10,775 - DEBUG - Starting component System
+2025-04-08 21:18:10,775 - DEBUG - Starting component Posthog
+2025-04-08 21:18:19,722 - INFO - Query 'what is prospine and who are u' requires a web search.
+2025-04-08 21:18:19,722 - INFO - Searching Prospine website with query: what is prospine and who are u
+2025-04-08 21:18:19,723 - DEBUG - Starting new HTTPS connection (1): prospine.in:443
+2025-04-08 21:18:20,468 - DEBUG - https://prospine.in:443 "GET / HTTP/1.1" 200 4911
+2025-04-08 21:18:20,468 - DEBUG - Prospine website response status code: 200
+2025-04-08 21:18:20,469 - INFO - Found information on the Prospine website.
